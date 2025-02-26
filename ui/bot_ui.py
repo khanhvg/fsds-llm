@@ -56,7 +56,9 @@ class ChatBot:
             print(f"FAQ error: {str(e)}")
         return {"found": False}
 
-    async def get_streaming_response(self, user_input: str) -> AsyncGenerator[str, None]:
+    async def get_streaming_response(
+        self, user_input: str
+    ) -> AsyncGenerator[str, None]:
         """Get streaming response from the order system"""
         try:
             # First check FAQ
